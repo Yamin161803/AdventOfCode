@@ -1,6 +1,5 @@
 def dayOne(data: list):
     array = []
-    run = True
     answer = 0
     for item in range(len(data)):
 
@@ -17,7 +16,6 @@ def dayOne(data: list):
                     answer = (
                         int(data[item]) * int(data[secondItem]) * int(data[thirdItem])
                     )
-                    run = False
 
     print(array)
     print(sum(array))

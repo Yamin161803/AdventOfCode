@@ -1,13 +1,11 @@
-def dayOne(data):
+def dayOne(data: list):
     array = []
     run = True
     answer = 0
     for item in range(len(data)):
-        if not run:
-            break
+
         for secondItem in range(item, len(data)):
-            if not run:
-                break
+
             for thirdItem in range(secondItem, len(data)):
                 if (
                     int(data[item]) + int(data[secondItem]) + int(data[thirdItem])
@@ -20,8 +18,7 @@ def dayOne(data):
                         int(data[item]) * int(data[secondItem]) * int(data[thirdItem])
                     )
                     run = False
-                if not run:
-                    break
+
     print(array)
     print(sum(array))
     return answer

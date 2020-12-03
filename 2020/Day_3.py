@@ -1,4 +1,4 @@
-def dayThree(IncreaseRightBy, increaseDownBy, fileName):
+def dayThree(increaseRightBy, increaseDownBy, fileName):
     with open(fileName, "r") as item:
         file = item.read().split("\n")
     answer = 0
@@ -8,7 +8,7 @@ def dayThree(IncreaseRightBy, increaseDownBy, fileName):
         temp = list(file[item])
         if temp[x % len(temp)] == "#":
             answer += 1
-        x += IncreaseRightBy
+        x += increaseRightBy
     return answer
 
 test = [[1, 1], [3, 1], [5, 1], [7, 1], [1, 2]]

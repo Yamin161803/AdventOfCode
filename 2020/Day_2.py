@@ -1,8 +1,9 @@
-from os import spawnl
+def dayTwo(fileName):
+    with open(fileName, "r") as item:
+        file = item.read().split("\n")
 
-
-def dayTwo(file):
     data = []
+
     for item in range(len(file)):
         data.append(file[item].split(":"))
 
@@ -16,7 +17,7 @@ def dayTwo(file):
 
         # Detta if stats för andra tjärnan
         if ((string[minNumber] == alfabetet) or (string[maxNumber] == alfabetet)) & (
-            string[minNumber] != string[maxNumber]
+                string[minNumber] != string[maxNumber]
         ):
             answer += 1
 
@@ -32,9 +33,4 @@ def dayTwo(file):
     return answer
 
 
-with open("2020/Day_2.txt", "r") as item:
-
-    file = item.read().split("\n")
-
-
-print(dayTwo(file))
+print(dayTwo("2020/Day_2.txt"))

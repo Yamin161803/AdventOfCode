@@ -4,7 +4,6 @@ def dayThree(increaseRightBy, increaseDownBy, fileName):
     amountOfTree = 0
     x = 0
     for item in range(0, len(file), increaseDownBy):
-
         temp = list(file[item])
         if temp[x % len(temp)] == "#":
             amountOfTree += 1

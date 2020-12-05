@@ -18,6 +18,12 @@ def dayFive(fileName):
                 if item[value]=="L":
                     columns -= availableColumnsRemaining
         answer.append(int(seatNumber*8 + columns))
+    #Andra tjärnan
+    for number in range(96,911):
+        if number not in answer:
+            return number
+    #första tjärnan
     return max(answer)
+
 
 print(dayFive("Day_5.txt"))
